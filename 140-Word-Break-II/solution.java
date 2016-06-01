@@ -5,12 +5,6 @@ public class Solution {
         if(dp.containsKey(s))   return dp.get(s);
         
         List<String> result = new ArrayList<String>();
-        for(int i = s.length() - 1; i >= 0; --i){
-            if(wordDict.contains(s.substring(i, s.length())))
-                break;
-            else if(i == 0)
-                return result;
-        }
         
         for(int i = 1; i < s.length(); ++i){
             if(wordDict.contains(s.substring(0, i))){
