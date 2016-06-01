@@ -13,14 +13,15 @@ class Solution(object):
                 result_list.append([word_dict[word], word_dict[word[::-1]]])
             for i in range(len(word)):
                 if self.is_palindrome(word[i:]):
-                    reversed_word = word[:i]
-                    reversed_word = reversed_word[::-1]
+                    if i == 0:
+                        reversed_word = ""
+                    else:
+                        reversed_word = word[i-1::-1]
                     if reversed_word in word_dict and reversed_word != word:
                         result_list.append([word_dict[word], word_dict[reversed_word]])
             for i in range(1, len(word) + 1):
                 if self.is_palindrome(word[:i]):
-                    reversed_word = word[i:]
-                    reversed_word = reversed_word[::-1]
+                    reversed_word = word[:i-1:-1]
                     if reversed_word in word_dict and reversed_word != word:
                         result_list.append([word_dict[reversed_word], word_dict[word]])
         
