@@ -1,5 +1,4 @@
 public class Solution {
-    
     HashMap<String, List<String>> dp = new HashMap<>();
     public List<String> wordBreak(String s, Set<String> wordDict) {
         
