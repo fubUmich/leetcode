@@ -20,6 +20,7 @@ public class Solution {
             result.add(s);
         
         dp.put(s, result);
+        
         return result;
     }
 }
