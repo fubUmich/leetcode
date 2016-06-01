@@ -4,8 +4,6 @@ class Solution(object):
         :type words: List[str]
         :rtype: List[List[int]]
         """
-        result_list = []
-        word_dict = {word : index for word, index in enumerate(words)}
         
         result_list = []
         word_dict = {word: index for index, word in enumerate(words)}
