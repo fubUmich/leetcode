@@ -10,13 +10,10 @@ class Solution(object):
             return 2
             
         result = 1
-        while n >= 3:
+        while n > 4:
             result *= 3
             n -= 3
-        
-        if n == 2:
-            result *= 2
-        elif n == 1:
-            result = result * 4 / 3
+            
+        result *= n
         
         return result
