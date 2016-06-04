@@ -18,9 +18,9 @@ class Solution(object):
         for i in range(1, 4):
             if start + i > len(s):
                 break
-            newNum = s[start:start + i]
-            if newNum == '0' or (newNum[0] != '0' and int(newNum) < 256):
-                list.append(newNum)
+            new_num = s[start:start + i]
+            if new_num == '0' or (new_num[0] != '0' and int(new_num) < 256):
+                list.append(new_num)
                 self.search_next_ip(list, s, result, start + i)
                 list.pop()
         
