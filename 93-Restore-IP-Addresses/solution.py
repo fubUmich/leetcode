@@ -13,16 +13,16 @@ class Solution(object):
         if len(list) == 4 and start == len(s):
             result.append(self.convert_list_to_IP(list))
             return
+        
         if len(s) - start > 3 * (4 - len(list)):
             return
+        
         for i in range(1, 4):
             if start + i > len(s):
                 break
             new_num = s[start:start + i]
             if new_num == '0' or (new_num[0] != '0' and int(new_num) < 256):
-                list.append(new_num)
-                self.search_next_ip(list, s, result, start + i)
-                list.pop()
+                self.search_next_ip(list + [new_num], s, result, start + i)
         
         
     def convert_list_to_IP(self, list):
