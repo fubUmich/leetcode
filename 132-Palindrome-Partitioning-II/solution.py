@@ -4,6 +4,13 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+        
+        if s == s[::-1]: 
+            return 0
+        for i in range(1, len(s)):
+            if s[:i] == s[:i][::-1] and s[i:] == s[i:][::-1]:
+                return 1
+        
         n = len(s)
         mincut = [i for i in xrange(-1, n)]
         
