@@ -18,8 +18,6 @@ class Solution(object):
     def generate_trees_with_nums(self, nums):
         if len(nums) == 0:
             return [None]
-        elif len(nums) == 1:
-            return [TreeNode(nums[0])]
         else:
             result_list = []
             for i in range(len(nums)):
