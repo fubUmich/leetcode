@@ -25,8 +25,9 @@ class Solution(object):
                 right_nodes = self.generate_trees_with_nums(nums[i+1:])
                 for left_node in left_nodes:
                     for right_node in right_nodes:
-                        result_list.append(TreeNode(nums[i]))
-                        result_list[-1].left = left_node
-                        result_list[-1].right = right_node
+                        new_node = TreeNode(nums[i])
+                        new_node.left = left_node
+                        new_node.right = right_node
+                        result_list.append(new_node)
             return result_list
                 
