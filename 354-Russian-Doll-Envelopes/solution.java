@@ -13,9 +13,6 @@ public class Solution {
         
         List<Integer> dp = new ArrayList<Integer>();
         for(int[] env : envelopes){
-            System.out.print(env[0]);
-            System.out.print(env[1]);
-            System.out.println();
             int index = binary_search(dp, env[1]);
             if(index == dp.size()){
                 dp.add(env[1]);
